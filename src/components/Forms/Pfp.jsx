@@ -5,7 +5,6 @@ import RandomPfp from '../assets/randompfp.jpg'
 import {Button} from 'primereact/button'
 import Avatar from 'react-avatar-edit'
 
-
 export default function Pfp() {
 const [Image, setImage] = useState("")
 const [ImageCrop, setImageCrop] = useState(false)
@@ -28,7 +27,6 @@ const saveCropImage = () => {
   setimagecrop(false);
 };
 
-
   return (
     <>
       <section className='flex flex-col bg-white p-7 rounded-[20px]'>
@@ -44,13 +42,8 @@ const saveCropImage = () => {
           onClick={()=>setImageCrop(true)}
           src={profileFinal.length ? profileFinal : RandomPfp}
           alt='pfp'/>
-          <label className='mt-3 font-poppins text-5xl'>Users Name</label>
-
           <Dialog
             visible={ImageCrop}
-            header={()=>(
-              <p className='text-2xl font-poppins'>Updated Profile</p>
-            )}
             onHide={()=>setImageCrop(false)}
           >
             <div className='flex flex-col justify-center items-center'>
